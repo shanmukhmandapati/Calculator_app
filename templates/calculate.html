@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form method="POST" action="/">
+        <label for="num1">Enter Number 1:</label>
+        <input type="number" name="num1" required><br><br>
+        <label for="num2">Enter Number 2:</label>
+        <input type="number" name="num2" required><br><br>
+        <input type="radio" name="operation" value="add" required>Addition
+        <input type="radio" name="operation" value="sub">Subtraction
+        <input type="radio" name="operation" value="multiply">Multiplication
+        <input type="radio" name="operation" value="division">Division<br><br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
